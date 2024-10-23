@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.javafx.chat_offline.controller.ChatController" spacing="10" padding="10">
+    <TextArea fx:id="chatArea" prefHeight="350" editable="false" />
+    <HBox spacing="10">
+        <TextField fx:id="inputField" HBox.hgrow="ALWAYS" />
+        <Button text="Enviar" onAction="#sendMessage" />
+    </HBox>
+</VBox>
+

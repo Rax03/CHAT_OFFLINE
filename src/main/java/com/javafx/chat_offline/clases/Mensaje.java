@@ -1,26 +1,51 @@
-package com.javafx.chat_offline.clases;
+package com.javafx.chatoffline;
+
+import java.time.LocalDateTime;
 
 public class Mensaje {
-    private String remitente;
-    private String destinatario;
-    private String texto;
+    private String de;
+    private String para;
+    private LocalDateTime fecha;
+    private String contenido;
 
-    public Mensaje(String remitente, String destinatario, String texto) {
-        this.remitente = remitente;
-        this.destinatario = destinatario;
-        this.texto = texto;
+    public Mensaje(String de, String para, String contenido) {
+        this.de = de;
+        this.para = para;
+        this.fecha = LocalDateTime.now();
+        this.contenido = contenido;
     }
 
-    public String getRemitente() {
-        return remitente;
+    public String getDe() {
+        return de;
     }
 
-    public String getDestinatario() {
-        return destinatario;
+    public void setDe(String de) {
+        this.de = de;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getPara() {
+        return para;
+    }
+
+    public void setPara(String para) {
+        this.para = para;
+    }
+
+    public LocalDateTime getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
     }
 }
+
 

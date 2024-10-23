@@ -1,20 +1,47 @@
-package com.javafx.chat_offline.clases;
+package com.javafx.chatoffline;
 
 public class Usuario {
+    private String id;
+    private String nombre;
+    private String email;
 
-    private String nombre ;
-    private String contrasena;
-
-    public Usuario(String nombre, String contrasena) {
+    public Usuario(String id, String nombre, String email) {
+        this.id = id;
         this.nombre = nombre;
-        this.contrasena = contrasena;
+        this.email = email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
+
